@@ -34,11 +34,13 @@
       theme: {
         extend: {
           colors: {
-            luxuryBg: '#050505',
-            luxurySurface: '#111111',
-            luxuryAccent: '#E5C07B',
-            luxuryText: '#FFFFFF',
-            luxurySecondary: '#A0A0A0',
+            luxuryBg: '#001C47',      // Deep Midnight Blue (Dominant Background)
+            luxuryBgDark: '#000C1F',  // Shadow Black / Dark Navy (Base shadows)
+            luxurySurface: '#000C1F', // Shadow Black / Dark Navy (Card surfaces)
+            luxuryAccent: '#F8F9FA',  // Pure Off-White (Active Text, badges)
+            luxuryText: '#FFFFFF',    // Pure White (Main text)
+            luxurySecondary: '#A2B5CD', // Muted silver-blue (Secondary hierarchy)
+            luxuryCobalt: '#003B73',  // Electric Navy/Cobalt (Glow & Highlights)
           },
           fontFamily: {
             serif: ['Playfair Display', 'Georgia', 'serif'],
@@ -160,7 +162,7 @@
       <div class="relative z-20 max-w-7xl mx-auto px-6 w-full text-center mt-20">
         <span class="font-display text-xs md:text-sm text-luxuryAccent tracking-[0.3em] uppercase block mb-4" data-aos="fade-up" data-aos-duration="1000">JOURNALIST • STORYTELLER • HYBRID ATHLETE</span>
         
-        <h1 id="hero-title" class="font-serif text-5xl md:text-8xl lg:text-9xl font-semibold tracking-wider leading-none select-none my-4">
+        <h1 id="hero-title" class="font-serif text-5xl md:text-8xl lg:text-9xl font-semibold tracking-wider leading-none select-none my-4 text-shadow-dark">
           <span class="block text-white" data-reveal-text>ANGGY</span>
           <span class="block text-luxuryAccent italic -mt-2 md:-mt-4" data-reveal-text>PASARIBU</span>
         </h1>

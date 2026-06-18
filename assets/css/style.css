@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  --bg-primary: #050505;
-  --bg-surface: #111111;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A0A0A0;
-  --accent: #E5C07B;
-  --accent-rgb: 229, 192, 123;
+  --bg-primary: #001C47;      /* Deep Midnight Blue */
+  --bg-surface: #000C1F;      /* Shadow Black / Dark Navy */
+  --text-primary: #FFFFFF;    /* Pure White */
+  --text-secondary: #A2B5CD;  /* Muted silver-blue */
+  --accent: #F8F9FA;          /* Pure Off-White */
+  --accent-rgb: 248, 249, 250;
+  --cobalt: #003B73;          /* Electric Navy/Cobalt */
+  --cobalt-rgb: 0, 59, 115;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Manrope', sans-serif;
@@ -26,6 +28,10 @@ body {
   overflow-x: hidden;
   position: relative;
   background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(var(--cobalt-rgb), 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(var(--cobalt-rgb), 0.15) 0%, transparent 45%);
+  background-attachment: fixed;
 }
 
 /* Custom Scrollbar */
@@ -33,10 +39,10 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: var(--bg-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: var(--cobalt);
   border-radius: 3px;
   transition: background 0.3s ease;
 }
@@ -69,7 +75,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 .custom-cursor-follower {
   width: 32px;
   height: 32px;
-  border: 1px solid rgba(var(--accent-rgb), 0.4);
+  border: 1px solid rgba(var(--cobalt-rgb), 0.5);
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -101,14 +107,14 @@ body.cursor-hover .custom-cursor-follower {
 
 /* Custom Glassmorphism */
 .glass-panel {
-  background: rgba(17, 17, 17, 0.75);
+  background: rgba(0, 12, 31, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-nav {
-  background: rgba(5, 5, 5, 0.85);
+  background: rgba(0, 12, 31, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -116,7 +122,11 @@ body.cursor-hover .custom-cursor-follower {
 
 /* Gold Accent Glow Utilities */
 .text-accent-glow {
-  text-shadow: 0 0 15px rgba(var(--accent-rgb), 0.3);
+  text-shadow: 0 0 15px rgba(var(--cobalt-rgb), 0.4);
+}
+
+.text-shadow-dark {
+  text-shadow: 2px 4px 12px rgba(0, 12, 31, 0.95);
 }
 
 .glow-btn {
@@ -132,7 +142,7 @@ body.cursor-hover .custom-cursor-follower {
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(var(--accent-rgb), 0.15);
+  background: rgba(var(--cobalt-rgb), 0.25);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.6s ease, height 0.6s ease;
@@ -145,7 +155,7 @@ body.cursor-hover .custom-cursor-follower {
 }
 
 .glow-btn:hover {
-  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.35);
+  box-shadow: 0 0 20px rgba(var(--cobalt-rgb), 0.45);
   border-color: var(--accent);
 }
 
@@ -179,7 +189,7 @@ body.cursor-hover .custom-cursor-follower {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent) 0%, #ffffff 100%);
+  background: linear-gradient(90deg, var(--cobalt) 0%, var(--accent) 100%);
   width: 0%;
   z-index: 10000;
   transition: width 0.1s ease-out;
@@ -190,8 +200,8 @@ body.cursor-hover .custom-cursor-follower {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: rgba(17, 17, 17, 0.85);
-  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  background: rgba(0, 12, 31, 0.85);
+  border: 1px solid rgba(var(--cobalt-rgb), 0.4);
   color: #ffffff;
   width: 50px;
   height: 50px;
@@ -214,7 +224,7 @@ body.cursor-hover .custom-cursor-follower {
 
 .back-to-top:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.3);
+  box-shadow: 0 0 15px rgba(var(--cobalt-rgb), 0.45);
   color: var(--accent);
 }
 
@@ -224,15 +234,15 @@ body.cursor-hover .custom-cursor-follower {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background: rgba(17, 17, 17, 0.95);
-  border: 1.5px solid var(--accent);
+  background: rgba(0, 12, 31, 0.95);
+  border: 1.5px solid var(--cobalt);
   color: #ffffff;
   padding: 16px 28px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(var(--accent-rgb), 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(var(--cobalt-rgb), 0.3);
   z-index: 99999;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s;
   opacity: 0;
@@ -247,7 +257,7 @@ body.cursor-hover .custom-cursor-follower {
 
 /* Skeleton Loading */
 .skeleton {
-  background: linear-gradient(90deg, #111111 25%, #1d1d1d 50%, #111111 75%);
+  background: linear-gradient(90deg, #000C1F 25%, #001C47 50%, #000C1F 75%);
   background-size: 200% 100%;
   animation: loading-skeleton 1.5s infinite;
 }
@@ -283,7 +293,7 @@ body.cursor-hover .custom-cursor-follower {
   height: 1.5px;
   bottom: -4px;
   left: 0;
-  background-color: var(--accent);
+  background-color: var(--cobalt);
   transform-origin: bottom right;
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -295,7 +305,7 @@ body.cursor-hover .custom-cursor-follower {
 
 /* Cinematic Dark Hero overlay */
 .hero-gradient {
-  background: linear-gradient(180deg, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.85) 80%, rgba(5,5,5,1) 100%);
+  background: linear-gradient(180deg, rgba(0,12,31,0.2) 0%, rgba(0,12,31,0.85) 80%, rgba(0,12,31,1) 100%);
 }
 
 /* Form inputs styling */
@@ -308,7 +318,7 @@ body.cursor-hover .custom-cursor-follower {
 
 .form-input:focus {
   background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent);
-  box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.15);
+  border-color: var(--cobalt);
+  box-shadow: 0 0 10px rgba(var(--cobalt-rgb), 0.25);
   outline: none;
 }
