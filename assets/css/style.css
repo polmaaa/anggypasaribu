@@ -326,6 +326,6 @@ body.cursor-hover .custom-cursor-follower {
 /* Mobile Hero Background Position Adjustment */
 @media (max-width: 767px) {
   #hero {
-    background-position: -10% 50% !important;
+    background-position: -5% 50% !important;
   }
 }
