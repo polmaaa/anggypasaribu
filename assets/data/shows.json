@@ -1,23 +1,70 @@
 [
   {
-    "title": "Story of Anggy",
-    "category": "Interview & Human Stories",
-    "link": "https://www.youtube.com/playlist?list=PL2K9BWhV74y12345_dummy",
-    "image": "assets/images/show_story_of_anggy.png",
-    "description": "In-depth, soulful dialogues with game-changers, sharing raw narratives of struggle, vision, and triumph."
+    "type": "youtube",
+    "title": "Wawancara Eksklusif: Arah Baru Kebijakan Publik",
+    "description": "Menghadirkan dialog kritis bersama para pembuat kebijakan nasional mengenai regulasi dan implikasinya pada masyarakat luas.",
+    "url": "https://youtu.be/Z3RUnzA87Z8?si=8InP89Vx400MIg1r",
+    "videoId": "Z3RUnzA87Z8",
+    "thumbnail": "https://img.youtube.com/vi/Z3RUnzA87Z8/hqdefault.jpg",
+    "category": "YouTube Talkshow"
   },
   {
-    "title": "The Table",
-    "category": "Discussion & Debate",
-    "link": "https://www.youtube.com/playlist?list=PL2K9BWhV74y67890_dummy",
-    "image": "assets/images/show_the_table.png",
-    "description": "A dynamic debate platform where diverse voices sit together to unpack politics, tech, and cultural shifts."
+    "type": "instagram",
+    "title": "HYROX Elite Training Session",
+    "description": "Membangun ketahanan fisik dan disiplin tanpa batas melalui rangkaian latihan lari dan functional workout yang terprogram.",
+    "url": "https://www.instagram.com/p/DYWF9s5xNvm/",
+    "thumbnail": "assets/images/about_grit.png",
+    "category": "Instagram Post"
   },
   {
-    "title": "Perspectives",
-    "category": "Independent Journalism",
-    "link": "https://www.youtube.com/playlist?list=PL2K9BWhV74yabcde_dummy",
-    "image": "assets/images/show_perspectives.png",
-    "description": "On-ground investigative reporting and visual documentation uncovering stories that are rarely told."
+    "type": "youtube",
+    "title": "Perspectives: Menyuarakan Cerita di Balik Lensa",
+    "description": "Investigasi lapangan mendalam, mengungkap realitas sosial dan humanisme yang jarang tersentuh oleh sorotan media utama.",
+    "url": "https://youtu.be/n0AXnuSFIcA?si=pFQ0giXapckhcB4C",
+    "videoId": "n0AXnuSFIcA",
+    "thumbnail": "https://img.youtube.com/vi/n0AXnuSFIcA/hqdefault.jpg",
+    "category": "YouTube Investigative"
+  },
+  {
+    "type": "instagram",
+    "title": "National Economic Forum Moderator",
+    "description": "Memandu jalannya dialog interaktif antar pemimpin industri, membahas strategi investasi nasional dan pertumbuhan ekonomi mikro.",
+    "url": "https://www.instagram.com/p/DW6wytOk1ND/",
+    "thumbnail": "assets/images/about_voice.png",
+    "category": "Instagram Event"
+  },
+  {
+    "type": "youtube",
+    "title": "HYROX World Championship Nice: Race VLOG",
+    "description": "Kisah perjuangan di lintasan kompetisi dunia Nice, Prancis. Dari garis start hingga finis, membuktikan kekuatan fisik dan mental.",
+    "url": "https://youtu.be/4GbZSqUGHdY?si=0q0Ohoz0hYbnN8kD",
+    "videoId": "4GbZSqUGHdY",
+    "thumbnail": "https://img.youtube.com/vi/4GbZSqUGHdY/hqdefault.jpg",
+    "category": "YouTube Athlete VLOG"
+  },
+  {
+    "type": "instagram",
+    "title": "Story of Hope: Berbagi Inspirasi Bersama Anak-Anak Kanker",
+    "description": "Mengisi lokakarya komunikasi interaktif dan sesi mendongeng terapeutik guna menghidupkan harapan bagi para pejuang cilik kanker.",
+    "url": "https://www.instagram.com/anggyy.pasaribu/p/DMelHy2vuDP/",
+    "thumbnail": "assets/images/show_story_of_anggy.png",
+    "category": "Instagram Initiative"
+  },
+  {
+    "type": "youtube",
+    "title": "The Table: Polarisasi Opini Publik & Peran Media",
+    "description": "Debat meja bundar menghimpun berbagai perspektif seputar polarisasi informasi di era digitalisasi sosial media.",
+    "url": "https://youtu.be/ycj1XGHT208?si=sFd1cUJAwcAbS0xp",
+    "videoId": "ycj1XGHT208",
+    "thumbnail": "https://img.youtube.com/vi/ycj1XGHT208/hqdefault.jpg",
+    "category": "YouTube Debate"
+  },
+  {
+    "type": "instagram",
+    "title": "Media Coaching & Public Speaking Workshop",
+    "description": "Sesi privat pembekalan keterampilan berbicara di depan umum, olah vokal, dan kesadaran kamera bagi eksekutif korporat.",
+    "url": "https://www.instagram.com/p/DG7zZ0DA9QW/",
+    "thumbnail": "assets/images/show_the_table.png",
+    "category": "Instagram Services"
   }
 ]

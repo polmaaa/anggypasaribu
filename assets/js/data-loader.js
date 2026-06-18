@@ -76,28 +76,167 @@ function bindProfile(profile) {
 
 function bindShows(shows) {
   const container = document.getElementById('shows-grid-container');
+  const toggleBtn = document.getElementById('btn-toggle-shows');
+  const toggleText = document.getElementById('btn-toggle-text');
+  const toggleIcon = document.getElementById('btn-toggle-icon');
+  
   if (!container) return;
 
-  // Clear skeletons
-  container.innerHTML = '';
+  let isExpanded = false;
+  const initialCount = 4;
 
-  shows.forEach(show => {
-    const showCard = document.createElement('div');
-    showCard.className = 'flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-4 hover:border-luxuryAccent/40 transition-all duration-500 group';
-    showCard.innerHTML = `
-      <div class="image-zoom-container rounded-sm overflow-hidden aspect-[16/10] mb-6">
-        <img src="${show.image}" alt="${show.title} Poster" class="w-full h-full object-cover">
-      </div>
-      <span class="font-display text-xs text-luxuryAccent uppercase tracking-widest block mb-2">${show.category}</span>
-      <h3 class="font-serif text-2xl text-white mb-3">${show.title}</h3>
-      <p class="text-sm text-luxurySecondary leading-relaxed mb-6">${show.description}</p>
-      <a href="${show.link}" target="_blank" rel="noopener noreferrer" class="mt-auto px-6 py-3 bg-luxurySurface border border-white/5 text-white hover:border-luxuryAccent text-xs font-display tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group-hover:bg-luxuryAccent group-hover:text-black">
-        Watch Show
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-      </a>
-    `;
-    container.appendChild(showCard);
+  // Video Lightbox Modal elements
+  const videoModal = document.getElementById('video-modal');
+  const videoModalContainer = document.getElementById('video-modal-container');
+  const videoIframe = document.getElementById('video-iframe');
+  const closeVideoBtn = document.getElementById('close-video-modal');
+  const videoBackdrop = document.getElementById('video-modal-backdrop');
+
+  // Video Lightbox Modal Control functions
+  function openVideoModal(videoId) {
+    if (!videoModal || !videoIframe) return;
+    videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    
+    // Animate Modal Fade In
+    videoModal.classList.remove('opacity-0', 'pointer-events-none');
+    videoModal.classList.add('opacity-100', 'pointer-events-auto');
+    if (videoModalContainer) {
+      videoModalContainer.classList.remove('scale-95');
+      videoModalContainer.classList.add('scale-100');
+    }
+    
+    // Stop Lenis smooth scroll if active
+    if (window.lenis) {
+      window.lenis.stop();
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeVideoModal() {
+    if (!videoModal || !videoIframe) return;
+    videoIframe.src = '';
+    
+    // Animate Modal Fade Out
+    videoModal.classList.remove('opacity-100', 'pointer-events-auto');
+    videoModal.classList.add('opacity-0', 'pointer-events-none');
+    if (videoModalContainer) {
+      videoModalContainer.classList.remove('scale-100');
+      videoModalContainer.classList.add('scale-95');
+    }
+    
+    // Restart Lenis smooth scroll if active
+    if (window.lenis) {
+      window.lenis.start();
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Bind Close Events
+  if (closeVideoBtn) closeVideoBtn.addEventListener('click', closeVideoModal);
+  if (videoBackdrop) videoBackdrop.addEventListener('click', closeVideoModal);
+
+  // Esc key to close modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeVideoModal();
   });
+
+  function render(animNew = false) {
+    container.innerHTML = '';
+    const visibleShows = isExpanded ? shows : shows.slice(0, initialCount);
+
+    visibleShows.forEach((show) => {
+      const showCard = document.createElement('div');
+      showCard.className = 'flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-4 hover:border-luxuryAccent/40 transition-all duration-500 group';
+      
+      const isYoutube = show.type === 'youtube';
+      const buttonText = isYoutube ? 'Watch Show' : 'View Post';
+      const iconName = isYoutube ? 'play' : 'external-link';
+      
+      showCard.innerHTML = `
+        <div class="image-zoom-container rounded-sm overflow-hidden aspect-[16/10] mb-6">
+          <img src="${show.thumbnail}" alt="${show.title} Thumbnail" class="w-full h-full object-cover">
+        </div>
+        <span class="font-display text-xs text-luxuryAccent uppercase tracking-widest block mb-2">${show.category}</span>
+        <h3 class="font-serif text-lg md:text-xl text-white mb-3 line-clamp-2 min-h-[56px]">${show.title}</h3>
+        <p class="text-xs md:text-sm text-luxurySecondary leading-relaxed mb-6 line-clamp-3">${show.description}</p>
+        
+        ${isYoutube ? 
+          `<button data-video-id="${show.videoId}" class="mt-auto px-6 py-3 bg-luxurySurface border border-white/5 text-white hover:border-luxuryAccent text-xs font-display tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group-hover:bg-luxuryAccent group-hover:text-black btn-watch-show">
+            ${buttonText}
+            <i data-lucide="${iconName}" class="w-3.5 h-3.5"></i>
+          </button>` :
+          `<a href="${show.url}" target="_blank" rel="noopener noreferrer" class="mt-auto px-6 py-3 bg-luxurySurface border border-white/5 text-white hover:border-luxuryAccent text-xs font-display tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 group-hover:bg-luxuryAccent group-hover:text-black">
+            ${buttonText}
+            <i data-lucide="${iconName}" class="w-3.5 h-3.5"></i>
+          </a>`
+        }
+      `;
+      container.appendChild(showCard);
+    });
+
+    // Update Lucide Icons for dynamic content
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+
+    // Add triggers for Video Modal to WATCH SHOW buttons
+    const watchButtons = container.querySelectorAll('.btn-watch-show');
+    watchButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const videoId = btn.getAttribute('data-video-id');
+        openVideoModal(videoId);
+      });
+    });
+
+    // GSAP Stagger Fade In for newly added items
+    if (animNew && isExpanded && window.gsap) {
+      const addedCards = Array.from(container.children).slice(initialCount);
+      if (addedCards.length > 0) {
+        window.gsap.fromTo(addedCards,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', stagger: 0.1 }
+        );
+      }
+    }
+  }
+
+  // Initial render
+  render();
+
+  // Load More Button Action
+  if (toggleBtn) {
+    // Show/hide Load More button depending on total list length
+    if (shows.length <= initialCount) {
+      toggleBtn.classList.add('hidden');
+    } else {
+      toggleBtn.classList.remove('hidden');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      if (isExpanded) {
+        if (toggleText) toggleText.textContent = 'Sembunyikan';
+        if (toggleIcon) toggleIcon.setAttribute('data-lucide', 'chevron-up');
+        render(true);
+      } else {
+        if (toggleText) toggleText.textContent = 'Selengkapnya';
+        if (toggleIcon) toggleIcon.setAttribute('data-lucide', 'chevron-down');
+        render(false);
+        // Scroll back to the top of shows section smoothly
+        const section = document.getElementById('shows');
+        if (section) {
+          if (window.lenis) {
+            window.lenis.scrollTo(section, { offset: -50, duration: 1 });
+          } else {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    });
+  }
 }
 
 function bindAthlete(athlete) {
