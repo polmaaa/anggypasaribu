@@ -322,3 +322,10 @@ body.cursor-hover .custom-cursor-follower {
   box-shadow: 0 0 10px rgba(var(--cobalt-rgb), 0.25);
   outline: none;
 }
+
+/* Mobile Hero Background Position Adjustment */
+@media (max-width: 767px) {
+  #hero {
+    background-position: 30% 50% !important;
+  }
+}
