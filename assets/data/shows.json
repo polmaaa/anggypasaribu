@@ -9,14 +9,6 @@
     "category": "YouTube Talkshow"
   },
   {
-    "type": "instagram",
-    "title": "HYROX Elite Training Session",
-    "description": "Membangun ketahanan fisik dan disiplin tanpa batas melalui rangkaian latihan lari dan functional workout yang terprogram.",
-    "url": "https://www.instagram.com/p/DYWF9s5xNvm/",
-    "thumbnail": "assets/images/about_grit.png",
-    "category": "Instagram Post"
-  },
-  {
     "type": "youtube",
     "title": "Perspectives: Menyuarakan Cerita di Balik Lensa",
     "description": "Investigasi lapangan mendalam, mengungkap realitas sosial dan humanisme yang jarang tersentuh oleh sorotan media utama.",
@@ -26,14 +18,6 @@
     "category": "YouTube Investigative"
   },
   {
-    "type": "instagram",
-    "title": "National Economic Forum Moderator",
-    "description": "Memandu jalannya dialog interaktif antar pemimpin industri, membahas strategi investasi nasional dan pertumbuhan ekonomi mikro.",
-    "url": "https://www.instagram.com/p/DW6wytOk1ND/",
-    "thumbnail": "assets/images/about_voice.png",
-    "category": "Instagram Event"
-  },
-  {
     "type": "youtube",
     "title": "HYROX World Championship Nice: Race VLOG",
     "description": "Kisah perjuangan di lintasan kompetisi dunia Nice, Prancis. Dari garis start hingga finis, membuktikan kekuatan fisik dan mental.",
@@ -41,6 +25,22 @@
     "videoId": "4GbZSqUGHdY",
     "thumbnail": "https://img.youtube.com/vi/4GbZSqUGHdY/hqdefault.jpg",
     "category": "YouTube Athlete VLOG"
+  },
+  {
+    "type": "instagram",
+    "title": "HYROX Elite Training Session",
+    "description": "Membangun ketahanan fisik dan disiplin tanpa batas melalui rangkaian latihan lari dan functional workout yang terprogram.",
+    "url": "https://www.instagram.com/p/DYWF9s5xNvm/",
+    "thumbnail": "assets/images/about_grit.png",
+    "category": "Instagram Post"
+  },
+  {
+    "type": "instagram",
+    "title": "National Economic Forum Moderator",
+    "description": "Memandu jalannya dialog interaktif antar pemimpin industri, membahas strategi investasi nasional dan pertumbuhan ekonomi mikro.",
+    "url": "https://www.instagram.com/p/DW6wytOk1ND/",
+    "thumbnail": "assets/images/about_voice.png",
+    "category": "Instagram Event"
   },
   {
     "type": "instagram",
