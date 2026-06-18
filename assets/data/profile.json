@@ -1,0 +1,23 @@
+{
+  "name": "Anggy Pasaribu",
+  "title": "Journalist. Storyteller. Hybrid Athlete.",
+  "heroDescription": "Creating conversations that matter, stories that inspire, and a life built on discipline.",
+  "about": {
+    "voice": {
+      "title": "The Voice",
+      "subtitle": "Journalist & Storyteller",
+      "paragraphs": [
+        "A seasoned television news anchor, journalist, and talkshow host with over a decade of national broadcast experience. Anggy has been at the forefront of national conversations, interviewing top-tier policymakers, key leaders, and influential social figures.",
+        "Through her platform, she serves as a catalyst for meaningful discussions, translating complex socioeconomic events into stories that resonate, educate, and empower the wider public. For her, storytelling is not just a career—it is a mission to elevate truth and human connection."
+      ]
+    },
+    "grit": {
+      "title": "The Grit",
+      "subtitle": "HYROX Athlete & Competitor",
+      "paragraphs": [
+        "Beyond the studio lights, Anggy pushes the limits of physical endurance as a competitive HYROX athlete. Competing in rigorous international events, she embodies the principles of modern hybrid athleticism.",
+        "Her journey is fueled by a relentless commitment to physical strength and mental resilience. She believes that the discipline forged in high-intensity functional training directly translates to professional excellence, bringing grit and determination into every aspect of life."
+      ]
+    }
+  }
+}

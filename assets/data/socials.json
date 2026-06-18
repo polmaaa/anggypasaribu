@@ -1,0 +1,26 @@
+[
+  {
+    "platform": "YouTube",
+    "url": "https://youtube.com/@AnggyPasaribu",
+    "icon": "youtube",
+    "handle": "@AnggyPasaribu"
+  },
+  {
+    "platform": "Instagram",
+    "url": "https://instagram.com/anggypasaribu",
+    "icon": "instagram",
+    "handle": "@anggypasaribu"
+  },
+  {
+    "platform": "TikTok",
+    "url": "https://tiktok.com/@anggypasaribu",
+    "icon": "music",
+    "handle": "@anggypasaribu"
+  },
+  {
+    "platform": "Ayoo Entertainment",
+    "url": "https://ayooentertainment.com",
+    "icon": "globe",
+    "handle": "ayooentertainment.com"
+  }
+]

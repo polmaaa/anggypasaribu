@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Story of Anggy",
+    "category": "Interview & Human Stories",
+    "link": "https://www.youtube.com/playlist?list=PL2K9BWhV74y12345_dummy",
+    "image": "assets/images/show_story_of_anggy.png",
+    "description": "In-depth, soulful dialogues with game-changers, sharing raw narratives of struggle, vision, and triumph."
+  },
+  {
+    "title": "The Table",
+    "category": "Discussion & Debate",
+    "link": "https://www.youtube.com/playlist?list=PL2K9BWhV74y67890_dummy",
+    "image": "assets/images/show_the_table.png",
+    "description": "A dynamic debate platform where diverse voices sit together to unpack politics, tech, and cultural shifts."
+  },
+  {
+    "title": "Perspectives",
+    "category": "Independent Journalism",
+    "link": "https://www.youtube.com/playlist?list=PL2K9BWhV74yabcde_dummy",
+    "image": "assets/images/show_perspectives.png",
+    "description": "On-ground investigative reporting and visual documentation uncovering stories that are rarely told."
+  }
+]

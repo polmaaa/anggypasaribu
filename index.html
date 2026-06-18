@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Story of Anggy | Premium Portfolio & Media Presence</title>
+  <meta name="description" content="Journalist. Storyteller. Talkshow Host. Media Entrepreneur. HYROX Athlete. Explore the dual worlds of Anggy Pasaribu—from broadcast studios to elite physical grit.">
+  <meta name="keywords" content="Anggy Pasaribu, Journalist, TV Anchor, Talkshow Host, HYROX Athlete, Story of Anggy, The Table, Perspectives, Public Speaking, Moderator">
+  <meta name="author" content="Anggy Pasaribu">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://storyofanggy.com/">
+  <meta property="og:title" content="Story of Anggy | Premium Portfolio & Media Presence">
+  <meta property="og:description" content="Journalist. Storyteller. Talkshow Host. Media Entrepreneur. HYROX Athlete. Explore the dual worlds of Anggy Pasaribu—from broadcast studios to elite physical grit.">
+  <meta property="og:image" content="assets/images/hero_anggy.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://storyofanggy.com/">
+  <meta property="twitter:title" content="Story of Anggy | Premium Portfolio & Media Presence">
+  <meta property="twitter:description" content="Journalist. Storyteller. Talkshow Host. Media Entrepreneur. HYROX Athlete. Explore the dual worlds of Anggy Pasaribu—from broadcast studios to elite physical grit.">
+  <meta property="twitter:image" content="assets/images/hero_anggy.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>A</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            luxuryBg: '#050505',
+            luxurySurface: '#111111',
+            luxuryAccent: '#E5C07B',
+            luxuryText: '#FFFFFF',
+            luxurySecondary: '#A0A0A0',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            display: ['Manrope', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Library Style Sheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-luxuryBg text-luxuryText antialiased">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Elements (Desktop only) -->
+  <div class="custom-cursor hidden lg:block" id="js-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower hidden lg:block" id="js-cursor-follower" aria-hidden="true"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="fixed inset-0 bg-luxuryBg z-[99999] flex flex-col justify-between p-8 md:p-16 transition-opacity duration-700">
+    <div class="flex justify-between items-center w-full">
+      <span class="font-serif italic text-luxuryAccent text-xl md:text-2xl">Story of Anggy</span>
+      <span class="font-display tracking-widest text-xs md:text-sm text-luxurySecondary">PORTFOLIO & MEDIA KIT</span>
+    </div>
+    
+    <div class="my-auto flex flex-col items-start max-w-4xl">
+      <h2 class="font-serif text-4xl md:text-7xl lg:text-8xl text-left leading-tight overflow-hidden">
+        <span class="block translate-y-full transition-transform duration-700 delay-100" id="loader-title-1">Creating Conversations</span>
+      </h2>
+      <h2 class="font-serif text-4xl md:text-7xl lg:text-8xl text-left leading-tight overflow-hidden mt-2">
+        <span class="block translate-y-full transition-transform duration-700 delay-300 italic text-luxuryAccent" id="loader-title-2">That Matter.</span>
+      </h2>
+    </div>
+
+    <div class="flex justify-between items-end w-full border-t border-white/10 pt-6">
+      <div class="flex flex-col">
+        <span class="font-display text-xs text-luxurySecondary uppercase tracking-widest">System Status</span>
+        <span class="text-xs text-luxuryAccent mt-1 flex items-center gap-2">
+          <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+          Ready to Live
+        </span>
+      </div>
+      <div class="flex flex-col items-end">
+        <span class="font-serif text-6xl md:text-8xl text-luxuryAccent font-light" id="loader-counter">00</span>
+        <span class="font-display text-xs text-luxurySecondary tracking-widest mt-2">LOADING STORY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glass Sticky Navigation Header -->
+  <header class="fixed top-0 left-0 w-full z-[999] glass-nav transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="font-serif text-xl md:text-2xl font-semibold tracking-wide text-white hover:text-luxuryAccent transition-colors duration-300" aria-label="Story of Anggy homepage">
+        ANGGY PASARIBU<span class="text-luxuryAccent">.</span>
+      </a>
+
+      <!-- Desktop Menu Items -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="#about" class="text-sm font-display font-medium text-luxurySecondary hover:text-white transition-colors duration-300 hover-underline-gold">About</a>
+        <a href="#shows" class="text-sm font-display font-medium text-luxurySecondary hover:text-white transition-colors duration-300 hover-underline-gold">The Shows</a>
+        <a href="#athlete" class="text-sm font-display font-medium text-luxurySecondary hover:text-white transition-colors duration-300 hover-underline-gold">Hybrid Athlete</a>
+        <a href="#services" class="text-sm font-display font-medium text-luxurySecondary hover:text-white transition-colors duration-300 hover-underline-gold">Services</a>
+        <a href="#contact" class="text-sm font-display font-medium text-luxurySecondary hover:text-white transition-colors duration-300 hover-underline-gold">Contact</a>
+      </nav>
+
+      <!-- CTA Button Desktop -->
+      <div class="hidden md:block">
+        <a href="#contact" class="px-6 py-2.5 bg-transparent border border-luxuryAccent/40 hover:border-luxuryAccent text-luxuryAccent hover:text-white rounded-sm text-xs font-display tracking-widest uppercase transition-all duration-300 glow-btn">
+          Let's Collaborate
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button Mobile -->
+      <button class="md:hidden flex flex-col justify-center items-end gap-1.5 w-8 h-8 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="w-8 h-0.5 bg-white transition-all duration-300" id="hamburger-top"></span>
+        <span class="w-6 h-0.5 bg-white transition-all duration-300" id="hamburger-mid"></span>
+        <span class="w-4 h-0.5 bg-white transition-all duration-300" id="hamburger-bot"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay Screen -->
+  <div id="mobile-menu" class="fixed inset-0 bg-luxuryBg z-[998] flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-all duration-500" aria-hidden="true">
+    <nav class="flex flex-col gap-6 text-left">
+      <span class="font-serif italic text-luxuryAccent text-sm tracking-widest border-b border-white/5 pb-2">Navigation</span>
+      <a href="#about" class="text-4xl font-serif text-white hover:text-luxuryAccent transition-colors duration-300 py-1 mobile-link">The About</a>
+      <a href="#shows" class="text-4xl font-serif text-white hover:text-luxuryAccent transition-colors duration-300 py-1 mobile-link">The Shows</a>
+      <a href="#athlete" class="text-4xl font-serif text-white hover:text-luxuryAccent transition-colors duration-300 py-1 mobile-link">Hybrid Athlete</a>
+      <a href="#services" class="text-4xl font-serif text-white hover:text-luxuryAccent transition-colors duration-300 py-1 mobile-link">Impact & Services</a>
+      <a href="#contact" class="text-4xl font-serif text-white hover:text-luxuryAccent transition-colors duration-300 py-1 mobile-link">Get In Touch</a>
+    </nav>
+    <div class="mt-16 flex flex-col gap-4 border-t border-white/5 pt-8">
+      <span class="font-display text-xs text-luxurySecondary uppercase tracking-widest">Connect Directly</span>
+      <div class="flex gap-6" id="mobile-socials-container">
+        <!-- Loaded via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN SCROLL CONTENT -->
+  <main id="scrollytelling-container">
+
+    <!-- SECTION 1 – HERO -->
+    <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden bg-cover bg-center" style="background-image: url('assets/images/hero_anggy.png');" aria-labelledby="hero-title">
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/60 z-10 hero-gradient"></div>
+      
+      <!-- Content Container -->
+      <div class="relative z-20 max-w-7xl mx-auto px-6 w-full text-center mt-20">
+        <span class="font-display text-xs md:text-sm text-luxuryAccent tracking-[0.3em] uppercase block mb-4" data-aos="fade-up" data-aos-duration="1000">JOURNALIST • STORYTELLER • HYBRID ATHLETE</span>
+        
+        <h1 id="hero-title" class="font-serif text-5xl md:text-8xl lg:text-9xl font-semibold tracking-wider leading-none select-none my-4">
+          <span class="block text-white" data-reveal-text>ANGGY</span>
+          <span class="block text-luxuryAccent italic -mt-2 md:-mt-4" data-reveal-text>PASARIBU</span>
+        </h1>
+        
+        <p id="hero-desc" class="max-w-2xl mx-auto font-sans text-base md:text-lg text-luxurySecondary leading-relaxed mt-6 mb-10" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          Creating conversations that matter, stories that inspire, and a life built on discipline.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
+          <a href="#about" class="px-8 py-3.5 bg-luxuryAccent text-black hover:bg-white hover:text-black font-display font-semibold text-xs tracking-widest uppercase rounded-sm transition-all duration-300 glow-btn">
+            Enter the Story
+          </a>
+          <a href="#contact" class="px-8 py-3.5 bg-transparent border border-white/20 hover:border-white text-white font-display font-semibold text-xs tracking-widest uppercase rounded-sm transition-all duration-300">
+            Book Inquiries
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 group" aria-label="Scroll to about section">
+        <span class="font-display text-[10px] text-luxurySecondary uppercase tracking-[0.25em] group-hover:text-luxuryAccent transition-colors duration-300">Scroll Down</span>
+        <div class="w-[1px] h-10 bg-white/20 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1/2 bg-luxuryAccent animate-bounce"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- SECTION 2 – ABOUT ME (THE TWO SIDES) -->
+    <section id="about" class="py-24 md:py-32 relative bg-luxuryBg" aria-labelledby="about-title">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 md:mb-24">
+          <span class="font-display text-xs text-luxuryAccent tracking-widest uppercase block mb-3">THE DUAL JOURNEY</span>
+          <h2 id="about-title" class="font-serif text-4xl md:text-6xl text-white">The Two Sides</h2>
+          <div class="w-20 h-0.5 bg-luxuryAccent mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
+          
+          <!-- LEFT SIDE: THE VOICE -->
+          <div class="flex flex-col justify-between border-r border-white/5 pr-0 lg:pr-12 group" id="about-voice-side">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-10 h-10 rounded-full border border-luxuryAccent/40 flex items-center justify-center text-luxuryAccent">
+                  <i data-lucide="mic" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="font-display text-xs text-luxurySecondary uppercase tracking-widest block">Side One</span>
+                  <h3 class="font-serif text-3xl text-white" id="about-voice-title">The Voice</h3>
+                </div>
+              </div>
+              
+              <div class="image-zoom-container rounded-sm aspect-[16/10] overflow-hidden relative mb-8">
+                <div class="absolute inset-0 bg-black/30 z-10 transition-opacity duration-500 group-hover:opacity-10"></div>
+                <img src="assets/images/about_voice.png" alt="Anggy in the newsroom broadcast studio" class="w-full h-full object-cover">
+              </div>
+
+              <div id="about-voice-text" class="space-y-4 text-luxurySecondary font-sans text-sm md:text-base leading-relaxed">
+                <!-- Loaded via JS -->
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5">
+              <a href="#shows" class="inline-flex items-center gap-3 text-xs font-display text-luxuryAccent tracking-wider uppercase hover:text-white transition-colors duration-300">
+                Explore Broadcast Portfolio
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: THE GRIT -->
+          <div class="flex flex-col justify-between pl-0 lg:pl-12 group" id="about-grit-side">
+            <div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-10 h-10 rounded-full border border-luxuryAccent/40 flex items-center justify-center text-luxuryAccent">
+                  <i data-lucide="activity" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="font-display text-xs text-luxurySecondary uppercase tracking-widest block">Side Two</span>
+                  <h3 class="font-serif text-3xl text-white" id="about-grit-title">The Grit</h3>
+                </div>
+              </div>
+
+              <!-- Black and White Style Image -->
+              <div class="image-zoom-container rounded-sm aspect-[16/10] overflow-hidden relative mb-8">
+                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-500 group-hover:opacity-10"></div>
+                <img src="assets/images/about_grit.png" alt="Anggy training in athletic setup" class="w-full h-full object-cover bw-img">
+              </div>
+
+              <div id="about-grit-text" class="space-y-4 text-luxurySecondary font-sans text-sm md:text-base leading-relaxed">
+                <!-- Loaded via JS -->
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5">
+              <a href="#athlete" class="inline-flex items-center gap-3 text-xs font-display text-luxuryAccent tracking-wider uppercase hover:text-white transition-colors duration-300">
+                View Athletic Journey
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 – THE SHOWS -->
+    <section id="shows" class="py-24 md:py-32 bg-luxurySurface relative" aria-labelledby="shows-title">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24">
+          <div>
+            <span class="font-display text-xs text-luxuryAccent tracking-widest uppercase block mb-3">DIGITAL MEDIA PORTFOLIO</span>
+            <h2 id="shows-title" class="font-serif text-4xl md:text-6xl text-white">The Shows</h2>
+          </div>
+          <p class="max-w-md text-luxurySecondary text-sm md:text-base mt-4 md:mt-0 font-sans leading-relaxed">
+            A collection of conversations, perspectives, and stories that challenge viewpoints and inspire connections.
+          </p>
+        </div>
+
+        <!-- Dynamic Card Container -->
+        <!-- While JS loads, show 3 skeleton cards -->
+        <div id="shows-grid-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Skeleton Card 1 -->
+          <div class="skeleton-card flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-4 h-[450px]">
+            <div class="skeleton h-56 rounded-sm mb-6"></div>
+            <div class="skeleton h-4 w-1/3 mb-4"></div>
+            <div class="skeleton h-8 w-3/4 mb-3"></div>
+            <div class="skeleton h-4 w-full mb-2"></div>
+            <div class="skeleton h-4 w-5/6 mb-6"></div>
+            <div class="skeleton h-10 w-1/3 mt-auto rounded-sm"></div>
+          </div>
+          <!-- Skeleton Card 2 -->
+          <div class="skeleton-card flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-4 h-[450px]">
+            <div class="skeleton h-56 rounded-sm mb-6"></div>
+            <div class="skeleton h-4 w-1/3 mb-4"></div>
+            <div class="skeleton h-8 w-3/4 mb-3"></div>
+            <div class="skeleton h-4 w-full mb-2"></div>
+            <div class="skeleton h-4 w-5/6 mb-6"></div>
+            <div class="skeleton h-10 w-1/3 mt-auto rounded-sm"></div>
+          </div>
+          <!-- Skeleton Card 3 -->
+          <div class="skeleton-card flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-4 h-[450px]">
+            <div class="skeleton h-56 rounded-sm mb-6"></div>
+            <div class="skeleton h-4 w-1/3 mb-4"></div>
+            <div class="skeleton h-8 w-3/4 mb-3"></div>
+            <div class="skeleton h-4 w-full mb-2"></div>
+            <div class="skeleton h-4 w-5/6 mb-6"></div>
+            <div class="skeleton h-10 w-1/3 mt-auto rounded-sm"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 – HYBRID ATHLETE -->
+    <section id="athlete" class="py-24 md:py-32 bg-luxuryBg relative" aria-labelledby="athlete-title">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16 md:mb-24">
+          <span class="font-display text-xs text-luxuryAccent tracking-widest uppercase block mb-3">HYBRID STRENGTH</span>
+          <h2 id="athlete-title" class="font-serif text-4xl md:text-6xl text-white">The Hybrid Athlete</h2>
+          <div class="w-20 h-0.5 bg-luxuryAccent mx-auto mt-6"></div>
+          <p id="athlete-philosophy" class="max-w-3xl mx-auto text-luxurySecondary text-sm md:text-base mt-8 italic leading-relaxed">
+            <!-- Loaded via JS -->
+          </p>
+        </div>
+
+        <!-- Dynamic Statistics Counters Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center mb-24 border-y border-white/5 py-12" id="stats-section">
+          <div class="flex flex-col items-center">
+            <span class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-luxuryAccent flex items-baseline justify-center" id="stat-races-box">
+              <span id="stat-races-val" data-target="0">0</span>
+            </span>
+            <span class="font-display text-xs md:text-sm text-luxurySecondary uppercase tracking-widest mt-3">Race Count</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <span class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white flex items-baseline justify-center" id="stat-countries-box">
+              <span id="stat-countries-val" data-target="0">0</span>
+            </span>
+            <span class="font-display text-xs md:text-sm text-luxurySecondary uppercase tracking-widest mt-3">Countries</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <span class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-luxuryAccent flex items-baseline justify-center" id="stat-hours-box">
+              <span id="stat-hours-val" data-target="0">0</span>
+              <span class="text-2xl ml-0.5">+</span>
+            </span>
+            <span class="font-display text-xs md:text-sm text-luxurySecondary uppercase tracking-widest mt-3">Training Hours</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <span class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white flex items-baseline justify-center" id="stat-collabs-box">
+              <span id="stat-collabs-val" data-target="0">0</span>
+            </span>
+            <span class="font-display text-xs md:text-sm text-luxurySecondary uppercase tracking-widest mt-3">Collaborations</span>
+          </div>
+        </div>
+
+        <!-- Split Layout: History List vs Image Gallery Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
+          
+          <!-- History Timeline (5 columns) -->
+          <div class="lg:col-span-5 flex flex-col">
+            <h3 class="font-serif text-2xl text-white mb-8 flex items-center gap-3">
+              <i data-lucide="award" class="text-luxuryAccent w-6 h-6"></i>
+              International Races
+            </h3>
+            
+            <div id="athlete-events-timeline" class="space-y-6 relative border-l border-white/10 pl-6">
+              <!-- Dynamically populated events with timeline nodes -->
+              <!-- Skeletons: -->
+              <div class="skeleton-event relative">
+                <div class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-luxurySecondary rounded-full"></div>
+                <div class="skeleton h-4 w-1/4 mb-2"></div>
+                <div class="skeleton h-6 w-3/4"></div>
+              </div>
+              <div class="skeleton-event relative mt-6">
+                <div class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 bg-luxurySecondary rounded-full"></div>
+                <div class="skeleton h-4 w-1/4 mb-2"></div>
+                <div class="skeleton h-6 w-3/4"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Masonry / Grid Layout (7 columns) -->
+          <div class="lg:col-span-7 flex flex-col">
+            <h3 class="font-serif text-2xl text-white mb-8 flex items-center gap-3">
+              <i data-lucide="image" class="text-luxuryAccent w-6 h-6"></i>
+              Training Log & Moments
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Visual Black & White High Contrast Collage -->
+              <div class="image-zoom-container rounded-sm overflow-hidden aspect-square relative group">
+                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover:opacity-10"></div>
+                <img src="assets/images/about_grit.png" alt="Athlete training moment 1" class="w-full h-full object-cover bw-img">
+                <div class="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-xs font-display text-white bg-black/60 px-3 py-1.5 rounded-sm">Endurance</span>
+                </div>
+              </div>
+
+              <div class="image-zoom-container rounded-sm overflow-hidden aspect-square relative group">
+                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover:opacity-10"></div>
+                <img src="assets/images/hero_anggy.png" alt="Athlete training moment 2" class="w-full h-full object-cover bw-img">
+                <div class="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-xs font-display text-white bg-black/60 px-3 py-1.5 rounded-sm">Strength</span>
+                </div>
+              </div>
+
+              <div class="image-zoom-container rounded-sm overflow-hidden aspect-square relative group">
+                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover:opacity-10"></div>
+                <img src="assets/images/about_voice.png" alt="Athlete training moment 3" class="w-full h-full object-cover bw-img">
+                <div class="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-xs font-display text-white bg-black/60 px-3 py-1.5 rounded-sm">Focus</span>
+                </div>
+              </div>
+
+              <div class="image-zoom-container rounded-sm overflow-hidden aspect-square relative group">
+                <div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover:opacity-10"></div>
+                <img src="assets/images/show_story_of_anggy.png" alt="Athlete training moment 4" class="w-full h-full object-cover bw-img">
+                <div class="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span class="text-xs font-display text-white bg-black/60 px-3 py-1.5 rounded-sm">Grit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5 – IMPACT & SERVICES -->
+    <section id="services" class="py-24 md:py-32 bg-luxurySurface relative" aria-labelledby="services-title">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Header -->
+        <div class="text-center mb-16 md:mb-24">
+          <span class="font-display text-xs text-luxuryAccent tracking-widest uppercase block mb-3">PROFESSIONAL OPPORTUNITIES</span>
+          <h2 id="services-title" class="font-serif text-4xl md:text-6xl text-white">Impact & Services</h2>
+          <div class="w-20 h-0.5 bg-luxuryAccent mx-auto mt-6"></div>
+        </div>
+
+        <!-- Dynamic Services Card Container -->
+        <div id="services-grid-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Skeletons: -->
+          <div class="skeleton-card flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-8 h-[360px]">
+            <div class="skeleton h-12 w-12 rounded-full mb-6"></div>
+            <div class="skeleton h-6 w-3/4 mb-4"></div>
+            <div class="skeleton h-4 w-full mb-2"></div>
+            <div class="skeleton h-4 w-5/6 mb-4"></div>
+            <div class="skeleton h-4 w-2/3"></div>
+          </div>
+          <div class="skeleton-card flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-8 h-[360px]">
+            <div class="skeleton h-12 w-12 rounded-full mb-6"></div>
+            <div class="skeleton h-6 w-3/4 mb-4"></div>
+            <div class="skeleton h-4 w-full mb-2"></div>
+            <div class="skeleton h-4 w-5/6 mb-4"></div>
+            <div class="skeleton h-4 w-2/3"></div>
+          </div>
+          <div class="skeleton-card flex flex-col bg-luxuryBg border border-white/5 rounded-sm p-8 h-[360px]">
+            <div class="skeleton h-12 w-12 rounded-full mb-6"></div>
+            <div class="skeleton h-6 w-3/4 mb-4"></div>
+            <div class="skeleton h-4 w-full mb-2"></div>
+            <div class="skeleton h-4 w-5/6 mb-4"></div>
+            <div class="skeleton h-4 w-2/3"></div>
+          </div>
+        </div>
+
+        <!-- CTA Collaboration Gateway -->
+        <div class="mt-20 glass-panel rounded-sm p-8 md:p-12 text-center max-w-4xl mx-auto border border-luxuryAccent/20" data-aos="zoom-in" data-aos-duration="1000">
+          <h3 class="font-serif text-2xl md:text-3xl text-white mb-4">Ready to elevate your project, event, or team?</h3>
+          <p class="max-w-2xl mx-auto text-luxurySecondary text-sm md:text-base mb-8 leading-relaxed">
+            Let's design a collaboration that sparks dialogue, inspires growth, and leaves a memorable impact. Open for speaking engagements, moderator bookings, and brand collaborations.
+          </p>
+          <a href="#contact" class="px-8 py-3.5 bg-luxuryAccent text-black hover:bg-white hover:text-black font-display font-semibold text-xs tracking-widest uppercase rounded-sm transition-all duration-300 glow-btn inline-block">
+            Let's Collaborate
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6 – CONTACT & COLLABORATION -->
+    <section id="contact" class="py-24 md:py-32 bg-luxuryBg relative" aria-labelledby="contact-title">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+          
+          <!-- Info Column (5 columns) -->
+          <div class="lg:col-span-5 flex flex-col justify-between" data-aos="fade-right" data-aos-duration="1200">
+            <div>
+              <span class="font-display text-xs text-luxuryAccent tracking-widest uppercase block mb-3">COLLABORATION GATEWAY</span>
+              <h2 id="contact-title" class="font-serif text-4xl md:text-5xl text-white mb-6">Contact & Collaboration</h2>
+              <p class="text-luxurySecondary text-sm md:text-base leading-relaxed mb-8">
+                Open for meaningful conversations, media consulting, speaking engagements, moderator roles, and brand integrations. Let's create something extraordinary together.
+              </p>
+              
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-sm bg-luxurySurface flex items-center justify-center text-luxuryAccent border border-white/5">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-luxurySecondary block">Email Address</span>
+                    <a href="mailto:info@anggypasaribu.com" class="text-sm text-white hover:text-luxuryAccent transition-colors">info@anggypasaribu.com</a>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-sm bg-luxurySurface flex items-center justify-center text-luxuryAccent border border-white/5">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-luxurySecondary block">Base Location</span>
+                    <span class="text-sm text-white">Jakarta, Indonesia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links & Partner Connect -->
+            <div class="mt-12 pt-8 border-t border-white/5">
+              <span class="font-display text-xs text-luxurySecondary uppercase tracking-widest block mb-4">Digital Presence</span>
+              <div class="flex flex-wrap gap-4" id="contact-socials-container">
+                <!-- Dynamically loaded via JS -->
+              </div>
+              
+              <!-- Ayoo Entertainment Connect -->
+              <div class="mt-8 p-4 bg-luxurySurface border border-white/5 rounded-sm flex items-center justify-between">
+                <div>
+                  <span class="font-serif text-sm font-semibold text-white block">Ayoo Entertainment</span>
+                  <span class="text-xs text-luxurySecondary">Media Production & Partnership</span>
+                </div>
+                <a href="https://ayooentertainment.com" target="_blank" rel="noopener noreferrer" class="text-xs text-luxuryAccent hover:underline flex items-center gap-1">
+                  Connect
+                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Column (7 columns) -->
+          <div class="lg:col-span-7" data-aos="fade-left" data-aos-duration="1200">
+            <div class="glass-panel p-8 md:p-10 rounded-sm border border-white/5">
+              <span class="font-display text-xs text-luxuryAccent tracking-widest uppercase block mb-6">Send An Inquiry</span>
+              
+              <form id="contact-form" novalidate class="space-y-6">
+                <!-- Name Field -->
+                <div>
+                  <label for="form-name" class="font-display text-xs text-luxurySecondary uppercase tracking-wider block mb-2">Full Name *</label>
+                  <input type="text" id="form-name" class="w-full form-input px-4 py-3 text-white text-sm" placeholder="e.g. John Doe">
+                  <span class="text-red-400 text-xs mt-1 block hidden" id="err-name" role="alert">Please enter a name with at least 3 characters.</span>
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                  <label for="form-email" class="font-display text-xs text-luxurySecondary uppercase tracking-wider block mb-2">Email Address *</label>
+                  <input type="email" id="form-email" class="w-full form-input px-4 py-3 text-white text-sm" placeholder="e.g. johndoe@company.com">
+                  <span class="text-red-400 text-xs mt-1 block hidden" id="err-email" role="alert">Please enter a valid email address.</span>
+                </div>
+
+                <!-- Message Field -->
+                <div>
+                  <label for="form-message" class="font-display text-xs text-luxurySecondary uppercase tracking-wider block mb-2">Your Message *</label>
+                  <textarea id="form-message" rows="5" class="w-full form-input px-4 py-3 text-white text-sm resize-none" placeholder="Let us know what you want to collaborate on..."></textarea>
+                  <span class="text-red-400 text-xs mt-1 block hidden" id="err-message" role="alert">Please write a message with at least 10 characters.</span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-4 bg-luxuryAccent text-black hover:bg-white hover:text-black font-display font-semibold text-xs tracking-widest uppercase rounded-sm transition-all duration-300 glow-btn flex items-center justify-center gap-2">
+                  Send Inquiry
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Premium Floating SUCCESS TOAST notification -->
+  <div id="success-toast" class="toast-notification" role="status" aria-live="polite">
+    <div class="w-6 h-6 rounded-full bg-luxuryAccent flex items-center justify-center text-black">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <div>
+      <span class="font-display text-sm font-semibold text-white block">Inquiry Submitted</span>
+      <span class="text-xs text-luxurySecondary">Your message has been stored successfully!</span>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i data-lucide="chevron-up" class="w-6 h-6"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-luxuryBg border-t border-white/5 text-center">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-serif text-sm italic text-luxurySecondary">Story of Anggy</span>
+      <p class="text-xs text-luxurySecondary">
+        &copy; 2026 Story of Anggy. All rights reserved. Built for global positioning.
+      </p>
+      <div class="flex gap-6 text-xs text-luxurySecondary font-display">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#shows" class="hover:text-white transition-colors">Shows</a>
+        <a href="#athlete" class="hover:text-white transition-colors">Athlete</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modules Loader (ES6 Modules) -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+/* Google Fonts: Playfair Display (Serif) & Inter/Manrope (Sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg-primary: #050505;
+  --bg-surface: #111111;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --accent: #E5C07B;
+  --accent-rgb: 229, 192, 123;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Manrope', sans-serif;
+}
+
+/* Base Styles */
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: initial; /* Lenis handles smooth scrolling */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.custom-cursor-follower {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(var(--accent-rgb), 0.4);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.1s ease-out, width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+/* Hover cursor states */
+body.cursor-hover .custom-cursor {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+}
+
+body.cursor-hover .custom-cursor-follower {
+  width: 50px;
+  height: 50px;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Hide default cursor on desktops */
+@media (min-width: 1024px) {
+  body, a, button, input, textarea, select {
+    cursor: none !important;
+  }
+}
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Gold Accent Glow Utilities */
+.text-accent-glow {
+  text-shadow: 0 0 15px rgba(var(--accent-rgb), 0.3);
+}
+
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.glow-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(var(--accent-rgb), 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: 0;
+}
+
+.glow-btn:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.35);
+  border-color: var(--accent);
+}
+
+/* Image Hover Zoom Cinematic */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Black & White to Color Hover Transition */
+.bw-img {
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bw-img:hover {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.03);
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, #ffffff 100%);
+  width: 0%;
+  z-index: 10000;
+  transition: width 0.1s ease-out;
+}
+
+/* Back To Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(17, 17, 17, 0.85);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 999;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(17, 17, 17, 0.95);
+  border: 1.5px solid var(--accent);
+  color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(var(--accent-rgb), 0.2);
+  z-index: 99999;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toast-notification.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, #111111 25%, #1d1d1d 50%, #111111 75%);
+  background-size: 200% 100%;
+  animation: loading-skeleton 1.5s infinite;
+}
+
+@keyframes loading-skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Swiper Customizations */
+.swiper-button-next, .swiper-button-prev {
+  color: var(--accent) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent) !important;
+}
+
+/* Gold Underline Reveal */
+.hover-underline-gold {
+  position: relative;
+}
+
+.hover-underline-gold::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.5px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent);
+  transform-origin: bottom right;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hover-underline-gold:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Cinematic Dark Hero overlay */
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.85) 80%, rgba(5,5,5,1) 100%);
+}
+
+/* Form inputs styling */
+.form-input {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.15);
+  outline: none;
+}

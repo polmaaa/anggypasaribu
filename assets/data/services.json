@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Public Speaking & Media Coaching",
+    "description": "Tailored training programs for corporate executives, public figures, and spokespersons. Elevating communication skills, camera presence, speechcraft, and strategic media relations.",
+    "icon": "mic"
+  },
+  {
+    "title": "MC & Talkshow Moderator",
+    "description": "Professional moderation for high-profile business forums, political dialogues, national summits, and premium corporate events requiring sharp editorial insight and engaging hosting.",
+    "icon": "message-square"
+  },
+  {
+    "title": "Social Initiative",
+    "description": "Story of Hope — a social program dedicating communication workshops and therapeutic storytelling sessions to children fighting cancer, fostering hope and self-expression.",
+    "icon": "heart"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "trainingHours": 1420,
+  "collaborations": 28,
+  "events": [
+    {
+      "event": "HYROX World Championship",
+      "country": "France",
+      "year": "2024"
+    },
+    {
+      "event": "HYROX Singapore Open",
+      "country": "Singapore",
+      "year": "2024"
+    },
+    {
+      "event": "HYROX Melbourne Pro Doubles",
+      "country": "Australia",
+      "year": "2023"
+    },
+    {
+      "event": "HYROX Incheon Open",
+      "country": "South Korea",
+      "year": "2023"
+    },
+    {
+      "event": "HYROX Stockholm Open",
+      "country": "Sweden",
+      "year": "2023"
+    },
+    {
+      "event": "HYROX Hong Kong Doubles",
+      "country": "Hong Kong",
+      "year": "2022"
+    }
+  ],
+  "philosophy": "True resilience is forged when the mind refuses to let the body quit. Every training session, every heartbeat, and every race is an opportunity to redefine limits."
+}
